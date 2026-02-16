@@ -1,0 +1,77 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body background */
+body{
+    background-image: url(./image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    /* Center content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parent container */
+#parent{
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 10px black;
+    background: rgba(255,255,255,0.9);
+}
+
+/* Label styling */
+label{
+    text-shadow: 2px 2px 5px rgba(44, 36, 36, 0.5);
+    color: #031730;
+    font-size: 28px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+}
+
+/* Input fields */
+input{
+    height: 35px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding-left: 8px;
+}
+
+/* Output text */
+#output{
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Button */
+button{
+    color: blue;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: yellow;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 480px){
+
+    #parent{
+        padding: 25px;
+    }
+
+    label{
+        font-size: 22px;
+    }
+
+}

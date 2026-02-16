@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="parent">
+    <label>Enter First Number:</label>
+    <input type="number" id="number1">
+
+    <label>Enter Second Number:</label>
+    <input type="number" id="number2">
+
+    <div class="btn-group">
+        <button onclick="Addition()">ADD</button>
+        <button onclick="Subtraction()">SUB</button>
+        <button onclick="Multiplication()">MUL</button>
+        <button onclick="Division()">DIV</button>
+    </div>
+
+    <label>FINAL RESULT</label>
+    <h1 id="output">0</h1>
+</div>
+
+<script>
+function getValues(){
+    let num1 = parseFloat(document.getElementById("number1").value) || 0;
+    let num2 = parseFloat(document.getElementById("number2").value) || 0;
+    return [num1, num2];
+}
+
+function Addition(){
+    let [a,b] = getValues();
+    output.innerHTML = a + b;
+}
+
+function Subtraction(){
+    let [a,b] = getValues();
+    output.innerHTML = a - b;
+}
+
+function Multiplication(){
+    let [a,b] = getValues();
+    output.innerHTML = a * b;
+}
+
+function Division(){
+    let [a,b] = getValues();
+    output.innerHTML = b !== 0 ? a / b : "Cannot divide by 0";
+}
+</script>
+
+</body>
+</html>
